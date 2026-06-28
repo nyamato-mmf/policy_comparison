@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GPCI 6分野 — 3都市政策比較</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Noto+Sans+JP:wght@400;500;700&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+<link href="css/custom.css" rel="stylesheet">
+</head>
+<body>
+
+<!-- ナビゲーション -->
+<nav class="nav">
+  <div class="nav-brand">GPCI 政策比較</div>
+  <div class="nav-tabs">
+    <button class="nav-tab active" onclick="showPage(1, this)">
+      <span class="tab-num">PAGE 01</span>
+      政策比較表
+    </button>
+    <button class="nav-tab" onclick="showPage(2, this)">
+      <span class="tab-num">PAGE 02</span>
+      グループ凡例
+    </button>
+  </div>
+</nav>
+
+<!-- ========== PAGE 1: 政策比較表 ========== -->
+<div class="page active" id="page1">
+
+  <div class="page-header">
+    <div>
+      <p class="header-eyebrow">Global Power City Index — 6分野</p>
+      <h1 class="header-title">3都市 都市政策<br>比較レポート</h1>
+      <p class="header-sub">東京・ロンドン・ニューヨークの主要都市計画をGPCI 6分野で整理・比較</p>
+    </div>
+    <div class="city-pills">
+      <div class="city-pill"><div class="city-pill-dot" style="background:var(--tokyo)"></div>2050東京戦略</div>
+      <div class="city-pill"><div class="city-pill-dot" style="background:var(--london)"></div>The London Plan 2021</div>
+      <div class="city-pill"><div class="city-pill-dot" style="background:var(--nyc)"></div>PlaNYC: Getting Sustainability Done</div>
+    </div>
+  </div>
+
+  <div class="section-wrap">
+    <table class="comparison-table">
+      <colgroup>
+        <col class="col-cat">
+        <col class="col-city">
+        <col class="col-city">
+        <col class="col-city">
+      </colgroup>
+      <thead>
+        <tr>
+          <th class="th-cat">分野</th>
+          <th class="th-city" style="background:var(--tokyo)">
+            <span class="city-label-en">TOKYO</span>
+            <span class="city-label-main"><a href="https://www.seisakukikaku.metro.tokyo.lg.jp/basic-plan/2050-tokyo/" target="_blank" rel="noopener noreferrer">2050東京戦略</a><p>（都政全般の総合戦略）</p></span>
+          </th>
+          <th class="th-city" style="background:var(--london)">
+            <span class="city-label-en">LONDON</span>
+            <span class="city-label-main"><a href="https://www.london.gov.uk/programmes-strategies/planning/london-plan/london-plan-2021" target="_blank" rel="noopener noreferrer">The London Plan 2021</a><p>（法定の空間計画）</p></span>
+          </th>
+          <th class="th-city" style="background:var(--nyc)">
+            <span class="city-label-en">NEW YORK</span>
+            <span class="city-label-main"><a href="https://www.nyc.gov/content/climate/pages/planyc-getting-sustainabilty-done" target="_blank" rel="noopener noreferrer">PlaNYC</a><p>（持続可能性を中心とした都市戦略）</p></span>
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+
+        <!-- Economy（経済） -->
+        <tr class="tr-data">
+          <td class="td-cat"><span class="cat-en">Economy</span><span class="cat-ja">経済</span></td>
+          <td class="td-cell">
+            <div class="policy-item"><span class="badge badge-upper">C</span><span class="policy-text">デジタル経済・DXによる産業高度化と競争力強化</span></div>
+            <div class="policy-item"><span class="badge badge-upper">D</span><span class="policy-text">水素エネルギーの社会実装化</span></div>
+            <div class="policy-item"><span class="badge badge-lower">a</span><span class="policy-text">東京発ユニコーン20社/年輩出、官民連携ファンドで資金支援</span></div>
+            <div class="policy-item"><span class="badge badge-lower">b</span><span class="policy-text">グローバル金融センター強化（デジタル証券、金融エキスパート育成）</span></div>
+            <div class="policy-item"><span class="badge badge-own">・</span><span class="policy-text">中小企業の稼ぐ力強化（TOKYO REBOOT INDUSTRY）</span></div>
+          </td>
+          <td class="td-cell">
+            <div class="policy-item"><span class="badge badge-upper">D</span><span class="policy-text">低炭素・循環型経済への移行で経済競争力を強化</span></div>
+            <div class="policy-item"><span class="badge badge-upper">C</span><span class="policy-text">デジタル経済・世界水準のデジタル接続基盤の整備</span></div>
+            <div class="policy-item"><span class="badge badge-lower">b</span><span class="policy-text">国際金融センターとしての競争力の維持</span></div>
+            <div class="policy-item"><span class="badge badge-own">・</span><span class="policy-text">2041年までに690万雇用を目標に経済多様化を推進</span></div>
+            <div class="policy-item"><span class="badge badge-own">・</span><span class="policy-text">中心活動地区（CAZ）＋ タウンセンターでの雇用創出</span></div>
+            <div class="policy-item"><span class="badge badge-own">・</span><span class="policy-text">手頃な価格の良質なオフィス・産業用地の確保</span></div>
+          </td>
+          <td class="td-cell">
+            <div class="policy-item"><span class="badge badge-upper">D</span><span class="policy-text">グリーン経済への移行を軸に雇用創出（洋上風力等の新産業育成）</span></div>
+            <div class="policy-item"><span class="badge badge-upper">D</span><span class="policy-text">低炭素ビジネスの育成と気候関連投資（連邦・州資金約10億ドル超）の活用</span></div>
+            <div class="policy-item"><span class="badge badge-own">・</span><span class="policy-text">フードウェイスト削減・農産物市場再整備でローカル経済強化</span></div>
+          </td>
+        </tr>
+        
+        <!-- R&D（研究・開発） -->
+        <tr class="tr-data">
+          <td class="td-cat"><span class="cat-en">R&D</span><span class="cat-ja">研究・開発</span></td>
+          <td class="td-cell">
+            <div class="policy-item"><span class="badge badge-upper">E</span><span class="policy-text">スタートアップ・エコシステム育成（Tokyo Innovation Base中心）とグローバル投資家誘致</span></div>
+            <div class="policy-item"><span class="badge badge-upper">E</span><span class="policy-text">生成AI・量子・宇宙等ディープテック領域のイノベーション創出（SusHi Tech Tokyo）</span></div>
+            <div class="policy-item"><span class="badge badge-upper">E</span><span class="policy-text">脱炭素技術（水素・再エネ・CO₂吸収）の研究開発加速</span></div>
+            <div class="policy-item"><span class="badge badge-lower">d</span><span class="policy-text">大学・研究機関と産業界をつなぐエコシステム構築（大学発ベンチャー2,000社/年目標）</span></div>
+            <div class="policy-item"><span class="badge badge-own">・</span><span class="policy-text">官民協働実践数1,000件/年の達成を目標に設定</span></div>
+          </td>
+          <td class="td-cell">
+            <div class="policy-item"><span class="badge badge-upper">E</span><span class="policy-text">イノベーション・研究での国際的リーダーシップ維持（国際インキュベーター機能）</span></div>
+            <div class="policy-item"><span class="badge badge-upper">C</span><span class="policy-text">デジタル技術・データサービスによる産業革新の推進</span></div>
+            <div class="policy-item"><span class="badge badge-lower">d</span><span class="policy-text">大学・研究機関との連携によるイノベーション拠点の強化</span></div>
+            <div class="policy-item"><span class="badge badge-own">・</span><span class="policy-text">政策立案における先進的モデルの国際発信</span></div>
+          </td>
+          <td class="td-cell">
+            <div class="policy-item"><span class="badge badge-upper">E</span><span class="policy-text">先進的な気候関連政策の立法・実施（Local Law 97等）と技術実証</span></div>
+            <div class="policy-item"><span class="badge badge-lower">e</span><span class="policy-text">新産業（洋上風力等）の技術実装と実証実験支援</span></div>
+            <div class="policy-item"><span class="badge badge-own">・</span><span class="policy-text">気候科学・環境正義に基づく調査・プログラム開発</span></div>
+          </td>
+        </tr>
+
+        <!-- Cultural Interaction (文化・交流） -->
+        <tr class="tr-data">
+          <td class="td-cat"><span class="cat-en">Cultural Interaction</span><span class="cat-ja">文化・交流</span></td>
+          <td class="td-cell">
+            <div class="policy-item"><span class="badge badge-upper">G</span><span class="policy-text">緑・自然環境を文化的資産として保全し市民に開放（東京グリーンビズ）</span></div>
+            <div class="policy-item"><span class="badge badge-lower">f</span><span class="policy-text">スポーツ・芸術文化など多様な体験活動の振興</span></div>
+            <div class="policy-item"><span class="badge badge-lower">g</span><span class="policy-text">ナイトタイム観光の推進</span></div>
+            <div class="policy-item"><span class="badge badge-lower">t</span><span class="policy-text">歴史文化・固有資産（江戸文化・アニメ・食）を活かした都市ブランド強化</span></div>
+            <div class="policy-item"><span class="badge badge-own">・</span><span class="policy-text">観光資源の開発・体験型コンテンツの強化</span></div>
+          </td>
+          <td class="td-cell">
+            <div class="policy-item"><span class="badge badge-upper">G</span><span class="policy-text">パブリックスペース整備によるコミュニティの帰属意識醸成</span></div>
+            <div class="policy-item"><span class="badge badge-lower">g</span><span class="policy-text">24時間都市としての夜間経済・ナイトカルチャーの振興</span></div>
+            <div class="policy-item"><span class="badge badge-lower">g</span><span class="policy-text">クリエイティブ産業・地域文化（パブ文化等）の保護と発展</span></div>
+            <div class="policy-item"><span class="badge badge-lower">t</span><span class="policy-text">歴史遺産・文化資産の保護・活用と都市アイデンティティの強化</span></div>
+            <div class="policy-item"><span class="badge badge-own">・</span><span class="policy-text">タウンセンターの文化・市民・経済生活の拠点としての役割強化</span></div>
+          </td>
+          <td class="td-cell">
+            <div class="policy-item"><span class="badge badge-upper">G</span><span class="policy-text">環境正義の観点から歴史的に恵まれてこなかったコミュニティの文化・生活環境改善</span></div>
+            <div class="policy-item"><span class="badge badge-lower">h</span><span class="policy-text">自然エリア（12,000エーカー）へのアクセス向上とプログラム充実</span></div>
+            <div class="policy-item"><span class="badge badge-own">・</span><span class="policy-text">フード政策（植物由来食の推進）を通じた多様な食文化の振興</span></div>
+          </td>
+        </tr>
+        
+        <!-- Livability（居住） -->
+        <tr class="tr-data">
+          <td class="td-cat"><span class="cat-en">Livability</span><span class="cat-ja">居住</span></td>
+          <td class="td-cell">
+            <div class="policy-item"><span class="badge badge-upper">H</span><span class="policy-text">多様性・包摂性を重視し誰もが自己実現できる社会の実現（ダイバーシティ推進）</span></div>
+            <div class="policy-item"><span class="badge badge-upper">C</span><span class="policy-text">DX・デジタルサービスにより行政・生活利便性を向上</span></div>
+            <div class="policy-item"><span class="badge badge-lower">i</span><span class="policy-text">子育て支援・教育への投資加速（チルドレンファースト）</span></div>
+            <div class="policy-item"><span class="badge badge-lower">j</span><span class="policy-text">高齢者・障害者等が暮らしやすいユニバーサル環境整備</span></div>
+            <div class="policy-item"><span class="badge badge-own">・</span><span class="policy-text">都民の「手取り時間」を増やすための行政DXの徹底</span></div>
+          </td>
+          <td class="td-cell">
+            <div class="policy-item"><span class="badge badge-upper">H</span><span class="policy-text">多様性・包摂性を重視した公平な都市づくり（フェアシティ）</span></div>
+            <div class="policy-item"><span class="badge badge-upper">G</span><span class="policy-text">誰もが快適に移動・滞在できる街路・公共空間の整備</span></div>
+            <div class="policy-item"><span class="badge badge-lower">k</span><span class="policy-text">手頃な住宅供給拡大（多様な居住ニーズへの対応）</span></div>
+            <div class="policy-item"><span class="badge badge-lower">i</span><span class="policy-text">社会統合・コミュニティ参加・社会的孤立の解消</span></div>
+            <div class="policy-item"><span class="badge badge-own">・</span><span class="policy-text">良質なコミュニティスペース・サービス・インフラへのアクセス確保</span></div>
+          </td>
+          <td class="td-cell">
+            <div class="policy-item"><span class="badge badge-upper">C</span><span class="policy-text">インフラ・生活サービスの高度化（スマートシティ・気候データ）</span></div>
+            <div class="policy-item"><span class="badge badge-upper">H</span><span class="policy-text">エネルギーアクセス確保（低所得戸建てへの太陽光無償設置）</span></div>
+            <div class="policy-item"><span class="badge badge-upper">H</span><span class="policy-text">気候変動の影響から脆弱なコミュニティ（低所得・マイノリティ）を優先的に保護</span></div>
+            <div class="policy-item"><span class="badge badge-own">・</span><span class="policy-text">最高室温規制・冷房義務化（2025年以降）など熱中症・気候適応策</span></div>
+            <div class="policy-item"><span class="badge badge-own">・</span><span class="policy-text">洪水被害住宅の買い取り・ハザード対策</span></div>
+            <div class="policy-item"><span class="badge badge-own">・</span><span class="policy-text">下水道改善・水害対策で居住安全性を向上</span></div>
+          </td>
+        </tr>
+        
+        <!-- Environment（環境） -->
+        <tr class="tr-data">
+          <td class="td-cat"><span class="cat-en">Environment</span><span class="cat-ja">環境</span></td>
+          <td class="td-cell">
+            <div class="policy-item"><span class="badge badge-upper">A</span><span class="policy-text">2050年CO₂実質ゼロ目標と脱炭素技術（太陽光・水素・CCS）の全面普及</span></div>
+            <div class="policy-item"><span class="badge badge-upper">B</span><span class="policy-text">都市緑化・グリーンインフラの推進（東京グリーンビズ100年プロジェクト）</span></div>
+            <div class="policy-item"><span class="badge badge-lower">n</span><span class="policy-text">廃棄物リユース・リサイクル推進（循環型社会の構築）</span></div>
+            <div class="policy-item"><span class="badge badge-lower">o</span><span class="policy-text">再生可能エネルギーの社会実装加速（太陽光パネル設置義務化等）</span></div>
+            <div class="policy-item"><span class="badge badge-own">・</span><span class="policy-text">水素エネルギーの社会実装加速・CCS等の先端脱炭素技術導入</span></div>
+          </td>
+          <td class="td-cell">
+            <div class="policy-item"><span class="badge badge-upper">A</span><span class="policy-text">2050年ネットゼロカーボン都市を目標に脱炭素施策を推進</span></div>
+            <div class="policy-item"><span class="badge badge-upper">B</span><span class="policy-text">都市緑化ファクター（UGF）・グリーンインフラの義務化と緑地ネットワーク整備</span></div>
+            <div class="policy-item"><span class="badge badge-lower">n</span><span class="policy-text">循環型経済の推進（廃棄物ゼロ・素材再利用のCircular Economy）</span></div>
+            <div class="policy-item"><span class="badge badge-lower">p</span><span class="policy-text">大気質改善（世界主要都市最高水準の大気質目標）</span></div>
+            <div class="policy-item"><span class="badge badge-own">・</span><span class="policy-text">グリーンベルト・メトロポリタンオープンランドの保全</span></div>
+          </td>
+          <td class="td-cell">
+            <div class="policy-item"><span class="badge badge-upper">A</span><span class="policy-text">2040年再エネ100%・2050年排出ゼロを目標に気候変動対策を推進</span></div>
+            <div class="policy-item"><span class="badge badge-upper">B</span><span class="policy-text">公共施設への再エネ・グリーンインフラ設備導入（2035年までに全市有施設）</span></div>
+            <div class="policy-item"><span class="badge badge-upper">B</span><span class="policy-text">グリーンインフラ整備によるウォーキング・サイクリング生活環境の向上</span></div>
+            <div class="policy-item"><span class="badge badge-upper">B</span><span class="policy-text">緑地・水辺の健全化と市有施設への再エネ・グリーンルーフ設置（2035年まで）</span></div>
+            <div class="policy-item"><span class="badge badge-upper">B</span><span class="policy-text">公園・グリーンウェイ・水辺空間を整備し文化・レクリエーションの拠点化</span></div>
+            <div class="policy-item"><span class="badge badge-lower">o</span><span class="policy-text">化石燃料インフラへの公的資本支出廃止と電動化推進</span></div>
+            <div class="policy-item"><span class="badge badge-lower">p</span><span class="policy-text">合流式下水道対策（CSO削減）・反アイドリングプログラム</span></div>
+            <div class="policy-item"><span class="badge badge-own">・</span><span class="policy-text">公民連携（PPP）による植樹・グリーンインフラ等の自然環境整備（Million Trees NYC等）</span></div>
+            <div class="policy-item"><span class="badge badge-own">・</span><span class="policy-text">「City of Yes for Carbon Neutrality」ゾーニング改正で脱炭素を制度化</span></div>
+          </td>
+        </tr>
+        
+        <!-- Accessibility（交通・アクセス） -->
+        <tr class="tr-data">
+          <td class="td-cat"><span class="cat-en">Accessibility</span><span class="cat-ja">交通・アクセス</span></td>
+          <td class="td-cell">
+            <div class="policy-item"><span class="badge badge-upper">I</span><span class="policy-text">高齢者・障害者等が利用しやすいユニバーサルデザイン・モビリティの推進</span></div>
+            <div class="policy-item"><span class="badge badge-upper">J</span><span class="policy-text">ゼロエミッション・モビリティの普及拡大</span></div>
+            <div class="policy-item"><span class="badge badge-lower">q</span><span class="policy-text">次世代モビリティ（自動運転・空飛ぶクルマ等）の社会実装</span></div>
+            <div class="policy-item"><span class="badge badge-own">・</span><span class="policy-text">既存道路・鉄道ネットワークの高度活用と都市の回遊性向上</span></div>
+            <div class="policy-item"><span class="badge badge-own">・</span><span class="policy-text">スマートシティ実装でインフラのデジタル化・効率化</span></div>
+          </td>
+          <td class="td-cell">
+            <div class="policy-item"><span class="badge badge-upper">I</span><span class="policy-text">安全で誰もが快適に利用できる移動環境（歩行・自転車・公共交通）の整備</span></div>
+            <div class="policy-item"><span class="badge badge-upper">J</span><span class="policy-text">持続可能な交通ネットワークの最大活用（低炭素モビリティ推進）</span></div>
+            <div class="policy-item"><span class="badge badge-lower">r</span><span class="policy-text">歩行者・自転車中心の「ヘルシーストリート」アジェンダの推進</span></div>
+            <div class="policy-item"><span class="badge badge-own">・</span><span class="policy-text">貨物輸送の効率化・街路ネットワークの持続的管理</span></div>
+            <div class="policy-item"><span class="badge badge-own">・</span><span class="policy-text">交通アクセス水準（PTAL）を用いた開発立地の適切な評価</span></div>
+          </td>
+          <td class="td-cell">
+            <div class="policy-item"><span class="badge badge-upper">I</span><span class="policy-text">歩行・自転車ネットワーク強化（グリーンウェイ300マイル超）による安全なアクティブ移動</span></div>
+            <div class="policy-item"><span class="badge badge-upper">J</span><span class="policy-text">低炭素・持続可能なモビリティへの転換（EV・自転車・船舶輸送）</span></div>
+            <div class="policy-item"><span class="badge badge-lower">r</span><span class="policy-text">外縁部の公園・自然エリアへのアクセス改善（300マイルのトレイル整備）</span></div>
+            <div class="policy-item"><span class="badge badge-own">・</span><span class="policy-text">路上トラックから自転車・船舶による貨物輸送への転換</span></div>
+          </td>
+        </tr>
+
+      </tbody>
+    </table>
+  </div>
+
+  <div class="footer">
+    <p>出典：2050東京戦略（東京都）/ The London Plan 2021（Greater London Authority）/ PlaNYC: Getting Sustainability Done（NYC Mayor's Office of Climate &amp; Environmental Justice）</p>
+    <p style="margin-top:4px;">※ Global Power City Index（森記念財団）の6分野に基づき整理。各施策は原文より要約・抽出。</p>
+  </div>
+</div>
+
+
+<!-- ========== PAGE 2: 凡例 ========== -->
+<div class="page" id="page2">
+
+  <div class="page-header">
+    <div>
+      <p class="header-eyebrow">凡例 — Policy Group Index</p>
+      <h1 class="header-title">グループ対応表</h1>
+      <p class="header-sub">同じ記号が付いた施策が3都市（大文字）または2都市（小文字）間で対応しています</p>
+    </div>
+    <div style="display:flex; flex-direction:column; gap:10px; align-items:flex-end;">
+      <div style="display:flex; align-items:center; gap:10px; font-size:12px;">
+        <span class="badge badge-upper" style="font-size:12px; min-width:32px; height:24px;">A</span>
+        <span style="color:var(--muted)">大文字 = 3都市共通グループ</span>
+      </div>
+      <div style="display:flex; align-items:center; gap:10px; font-size:12px;">
+        <span class="badge badge-lower" style="font-size:12px; min-width:32px; height:24px;">a</span>
+        <span style="color:var(--muted)">小文字 = 2都市共通グループ</span>
+      </div>
+      <div style="display:flex; align-items:center; gap:10px; font-size:12px;">
+        <span class="badge badge-own" style="font-size:13px; min-width:32px; height:24px;">・</span>
+        <span style="color:var(--muted)">固有施策（対応なし）</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="section-wrap">
+    <div class="legend-grid">
+
+      <!-- 3都市共通 -->
+      <div class="legend-block full">
+        <div class="legend-section-title">大文字グループ — 3都市共通</div>
+        <div class="legend-row"><span class="legend-sym"><span class="badge badge-upper">A</span></span><div><div class="legend-desc">脱炭素・ネットゼロ目標の推進</div><div class="legend-cities">Tokyo × London × New York</div></div></div>
+        <div class="legend-row"><span class="legend-sym"><span class="badge badge-upper">B</span></span><div><div class="legend-desc">都市緑化・グリーンインフラ整備</div><div class="legend-cities">Tokyo × London × New York</div></div></div>
+        <div class="legend-row"><span class="legend-sym"><span class="badge badge-upper">C</span></span><div><div class="legend-desc">デジタル化・DXによる経済・産業・生活サービス高度化</div><div class="legend-cities">Tokyo × London × New York</div></div></div>
+        <div class="legend-row"><span class="legend-sym"><span class="badge badge-upper">D</span></span><div><div class="legend-desc">グリーン経済・低炭素産業への移行</div><div class="legend-cities">Tokyo × London × New York</div></div></div>
+        <div class="legend-row"><span class="legend-sym"><span class="badge badge-upper">E</span></span><div><div class="legend-desc">イノベーション・研究開発拠点の国際的強化</div><div class="legend-cities">Tokyo × London × New York</div></div></div>
+        <div class="legend-row"><span class="legend-sym"><span class="badge badge-upper">F</span></span><div><div class="legend-desc">歴史・文化資産の保護・活用と都市ブランド強化</div><div class="legend-cities">Tokyo × London × New York</div></div></div>
+        <div class="legend-row"><span class="legend-sym"><span class="badge badge-upper">G</span></span><div><div class="legend-desc">パブリックスペース・自然環境へのアクセスと市民参加</div><div class="legend-cities">Tokyo × London × New York</div></div></div>
+        <div class="legend-row"><span class="legend-sym"><span class="badge badge-upper">H</span></span><div><div class="legend-desc">多様性・包摂性を重視した公平な都市づくり</div><div class="legend-cities">Tokyo × London × New York</div></div></div>
+        <div class="legend-row"><span class="legend-sym"><span class="badge badge-upper">I</span></span><div><div class="legend-desc">安全な移動環境の整備</div><div class="legend-cities">Tokyo × London × New York</div></div></div>
+        <div class="legend-row"><span class="legend-sym"><span class="badge badge-upper">J</span></span><div><div class="legend-desc">低炭素・持続可能なモビリティへの転換</div><div class="legend-cities">Tokyo × London × New York</div></div></div>
+      </div>
+
+      <!-- 2都市共通 -->
+      <div class="legend-block">
+        <div class="legend-section-title">小文字グループ — 2都市共通 (Tokyo × London)</div>
+        <div class="legend-row"><span class="legend-sym"><span class="badge badge-lower">a</span></span><div><div class="legend-desc">スタートアップ育成・官民連携ファンド</div><div class="legend-cities">Tokyo × London</div></div></div>
+        <div class="legend-row"><span class="legend-sym"><span class="badge badge-lower">b</span></span><div><div class="legend-desc">金融センター・高度人材育成</div><div class="legend-cities">Tokyo × London</div></div></div>
+        <div class="legend-row"><span class="legend-sym"><span class="badge badge-lower">d</span></span><div><div class="legend-desc">大学・研究機関と産業界のエコシステム構築</div><div class="legend-cities">Tokyo × London</div></div></div>
+        <div class="legend-row"><span class="legend-sym"><span class="badge badge-lower">g</span></span><div><div class="legend-desc">ナイトタイムエコノミー・多様な文化産業の振興</div><div class="legend-cities">Tokyo × London</div></div></div>
+        <div class="legend-row"><span class="legend-sym"><span class="badge badge-lower">i</span></span><div><div class="legend-desc">子育て支援・教育投資</div><div class="legend-cities">Tokyo × London</div></div></div>
+        <div class="legend-row"><span class="legend-sym"><span class="badge badge-lower">n</span></span><div><div class="legend-desc">廃棄物削減・循環型経済の推進</div><div class="legend-cities">Tokyo × London</div></div></div>
+        <div class="legend-row"><span class="legend-sym"><span class="badge badge-lower">q</span></span><div><div class="legend-desc">次世代モビリティ・自動運転の社会実装</div><div class="legend-cities">Tokyo × London</div></div></div>
+        <div class="legend-row"><span class="legend-sym"><span class="badge badge-lower">j</span></span><div><div class="legend-desc">ユニバーサルデザイン・バリアフリー環境整備</div><div class="legend-cities">Tokyo × London</div></div></div>
+        <div class="legend-row"><span class="legend-sym"><span class="badge badge-lower">t</span></span><div><div class="legend-desc">歴史遺産・文化資産の保護・活用</div><div class="legend-cities">Tokyo × London</div></div></div>
+      </div>
+      
+      <div class="legend-block">
+        <div class="legend-section-title">小文字グループ — 2都市共通 (Tokyo × New York)</div>
+        <div class="legend-row"><span class="legend-sym"><span class="badge badge-lower">f</span></span><div><div class="legend-desc">スポーツ・芸術・文化体験活動の振興</div><div class="legend-cities">Tokyo × New York</div></div></div>
+        <div class="legend-row"><span class="legend-sym"><span class="badge badge-lower">o</span></span><div><div class="legend-desc">再エネ普及・太陽光設置の義務化・促進</div><div class="legend-cities">Tokyo × New York</div></div></div>
+        <div class="legend-row"><span class="legend-sym"><span class="badge badge-lower">s</span></span><div><div class="legend-desc">エネルギー・交通ネットワークへのアクセス強化</div><div class="legend-cities">Tokyo × New York</div></div></div>
+      </div>
+      
+      <div class="legend-block">
+        <div class="legend-section-title">小文字グループ — 2都市共通 (London × New York)</div>
+        <div class="legend-row"><span class="legend-sym"><span class="badge badge-lower">c</span></span><div><div class="legend-desc">雇用多様化・地域経済の活性化</div><div class="legend-cities">London × New York</div></div></div>
+        <div class="legend-row"><span class="legend-sym"><span class="badge badge-lower">e</span></span><div><div class="legend-desc">新産業（再エネ等）の技術実装・実証</div><div class="legend-cities">London × New York</div></div></div>
+        <div class="legend-row"><span class="legend-sym"><span class="badge badge-lower">h</span></span><div><div class="legend-desc">自然エリアへのアクセス向上</div><div class="legend-cities">London × New York</div></div></div>
+        <div class="legend-row"><span class="legend-sym"><span class="badge badge-lower">k</span></span><div><div class="legend-desc">手頃な住宅供給・居住環境の改善</div><div class="legend-cities">London × New York</div></div></div>
+        <div class="legend-row"><span class="legend-sym"><span class="badge badge-lower">l</span></span><div><div class="legend-desc">熱中症・気候適応対策</div><div class="legend-cities">London × New York</div></div></div>
+        <div class="legend-row"><span class="legend-sym"><span class="badge badge-lower">m</span></span><div><div class="legend-desc">洪水・浸水ハザード対策</div><div class="legend-cities">London × New York</div></div></div>
+        <div class="legend-row"><span class="legend-sym"><span class="badge badge-lower">p</span></span><div><div class="legend-desc">大気質・環境汚染対策</div><div class="legend-cities">London × New York</div></div></div>
+        <div class="legend-row"><span class="legend-sym"><span class="badge badge-lower">r</span></span><div><div class="legend-desc">歩行者・自転車中心のまちづくり</div><div class="legend-cities">London × New York</div></div></div>
+
+      </div>
+
+    </div>
+  </div>
+
+  <div class="footer">
+    <p>出典：2050東京戦略（東京都）/ The London Plan 2021（Greater London Authority）/ PlaNYC: Getting Sustainability Done（NYC Mayor's Office of Climate &amp; Environmental Justice）</p>
+    <p style="margin-top:4px;">※ Global Power City Index（森記念財団）の6分野に基づき整理。各施策は原文より要約・抽出。</p>
+  </div>
+</div>
+
+<script>
+function showPage(num, btn) {
+  document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+  document.querySelectorAll('.nav-tab').forEach(t => t.classList.remove('active'));
+  document.getElementById('page' + num).classList.add('active');
+  btn.classList.add('active');
+  window.scrollTo(0, 0);
+}
+</script>
+</body>
+</html>
